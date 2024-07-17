@@ -1,1 +1,1 @@
-# poc-meeting-summarization
+# Meeting Summarization Proof of Concept

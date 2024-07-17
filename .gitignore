@@ -1,0 +1,5 @@
+.ipynb_checkpoints/
+
+diarization/audios/
+diarization/dialogues/
+diarization/diarized_outputs/
