@@ -1,7 +1,0 @@
-jupyterlab
-jupyterlab-execute-time
-jupyterlab_vim
-ipywidgets
-
-pytubefix
-pydub
