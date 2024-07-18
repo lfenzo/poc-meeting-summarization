@@ -1,0 +1,20 @@
+version: "3"
+services:
+  diarization:
+    image: diarization
+    ports:
+      - 8888:8888
+    volumes:
+      - ./diarization:/diarization:Z
+    env_file:
+      - ./diarization/ENV
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: ["bash", "-c", "source activate diarization && jupyter lab --ip=0.0.0.0 --no-browser --allow-root"]
+    security_opt:
+      - "label=disable"

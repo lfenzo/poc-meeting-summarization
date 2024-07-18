@@ -1,0 +1,21 @@
+name: diarization
+channels:
+  - defaults
+  - nvidia
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch==2.0.0
+  - torchvision==0.15.0
+  - torchaudio==2.0.0
+  - pytorch-cuda=11.8
+  - cuda==11.8
+  - pip:
+    - git+https://github.com/m-bain/whisperx.git
+    - pytubefix
+    - pydub
+    - jupyterlab
+    - jupyterlab-execute-time
+    - jupyterlab_vim
+    - ipywidgets
