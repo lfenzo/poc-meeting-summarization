@@ -4,3 +4,5 @@ diarization/audios/
 diarization/dialogues/
 diarization/diarized_outputs/
 diarization/models/
+
+summarization/models/

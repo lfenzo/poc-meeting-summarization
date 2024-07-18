@@ -1,0 +1,16 @@
+FROM nvidia/cuda:12.4.0-devel-ubuntu22.04
+
+RUN apt update && apt install -y \
+    wget \
+    bzip2 \
+    git \
+    ca-certificates \
+    python3-pip
+
+COPY ./requirements.txt requirements.txt
+
+ENV CMAKE_ARGS="-DGGML_CUDA=on"
+
+RUN pip install -r requirements.txt
+
+EXPOSE 8889
