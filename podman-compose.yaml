@@ -10,8 +10,9 @@ services:
       - 8888:8888
     volumes:
       - ./diarization:/diarization:Z
+      - ./outputs:/outputs:Z
     env_file:
-      - ./diarization/ENV
+      - ./ENV
     command: [
       "bash",
       "-c",
@@ -36,6 +37,9 @@ services:
       - 8889:8889
     volumes:
       - ./summarization:/summarization:Z
+      - ./outputs:/outputs:Z
+    env_file:
+      - ./ENV
     command: [
       "bash",
       "-c",
